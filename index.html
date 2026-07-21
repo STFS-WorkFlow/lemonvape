@@ -429,14 +429,10 @@ section{padding:104px 0;position:relative;overflow:hidden;}
 .eventy .sec-head p{color:rgba(251,251,246,0.62);}
 .eventy .eyebrow{color:var(--lime);}
 .eventy .blob-e{width:420px;height:420px;bottom:-160px;right:-140px;opacity:0.1;}
-.event-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:18px;position:relative;z-index:2;}
-.event-col-right{display:grid;grid-template-rows:1fr 1fr;gap:18px;}
-.event-card{border-radius:18px;overflow:hidden;position:relative;transition:transform .3s;}
+.event-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;position:relative;z-index:2;}
+.event-card{border-radius:18px;overflow:hidden;position:relative;transition:transform .3s;aspect-ratio:4/3;}
 .event-card:hover{transform:scale(1.02);}
 .event-card img,.event-card video{width:100%;height:100%;object-fit:cover;display:block;}
-.event-card .cap{position:absolute;bottom:0;left:0;right:0;padding:18px 16px 14px;background:linear-gradient(transparent,rgba(13,24,64,0.92));font-size:13px;font-weight:700;}
-.event-card.reel{aspect-ratio:9/16;border:2px solid rgba(255,255,255,0.12);box-shadow:0 8px 32px -8px rgba(0,0,0,0.4);}
-.event-card.wide{aspect-ratio:16/9;}
 
 /* GALLERY */
 .network{background:var(--ink);color:var(--paper);}
@@ -567,7 +563,6 @@ footer .blob-f{width:300px;height:300px;top:-130px;left:-110px;opacity:0.06;}
   .g-item.wide{grid-column:span 2;aspect-ratio:16/10;}
   .offer-grid{grid-template-columns:1fr 1fr;}
   .event-grid{grid-template-columns:1fr 1fr;}
-  .event-card.tall{aspect-ratio:4/3;}
   .vibe-inner{flex-direction:column;text-align:center;}
   .vibe-mark{display:none;}
 }
@@ -575,7 +570,6 @@ footer .blob-f{width:300px;height:300px;top:-130px;left:-110px;opacity:0.06;}
   .wrap,nav,.hero-grid,.foot-legal{padding-left:20px;padding-right:20px;}
   nav{padding-left:20px;padding-right:20px;}
   .offer-grid,.event-grid,.loc-grid,.stats-grid{grid-template-columns:1fr;}
-  .event-card.tall{aspect-ratio:16/10;}
   section{padding:72px 0;}
   .foot-row{flex-direction:column;text-align:center;}
   .gallery{display:block;position:relative;overflow:hidden;}
@@ -853,25 +847,42 @@ function ageNo(){
       <p>Lemon Vape to coś więcej niż regały — marka jest widoczna na lokalnych wydarzeniach w miastach, w których działają nasze salony.</p>
     </div>
     <div class="event-grid">
-      <div class="event-card reel reveal">
+      <div class="event-card reveal">
         <video id="reel-vid" src="videos/event-reel.mp4" muted autoplay playsinline style="width:100%;height:100%;object-fit:cover;display:block;transition:opacity 0.6s ease;"></video>
       </div>
-      <div class="event-col-right">
-        <div class="event-card wide reveal d1">
-          <img src="images/event-2.jpg" alt="Event 2" onerror="this.style.display='none'">
-          <div class="img-placeholder" style="height:100%;min-height:200px;">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-            <span>images/event-2.jpg</span>
-          </div>
-          <div class="cap">Obecność marki</div>
+      <div class="event-card reveal d1">
+        <img src="images/event-2.jpg" alt="Event" onerror="this.style.display='none'">
+        <div class="img-placeholder" style="height:100%;min-height:200px;">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span>images/event-2.jpg</span>
         </div>
-        <div class="event-card wide reveal d2">
-          <img src="images/event-3.jpg" alt="Event 3" onerror="this.style.display='none'">
-          <div class="img-placeholder" style="height:100%;min-height:200px;">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-            <span>images/event-3.jpg</span>
-          </div>
-          <div class="cap">Lokalne eventy</div>
+      </div>
+      <div class="event-card reveal d2">
+        <img src="images/event-3.jpg" alt="Event" onerror="this.style.display='none'">
+        <div class="img-placeholder" style="height:100%;min-height:200px;">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span>images/event-3.jpg</span>
+        </div>
+      </div>
+      <div class="event-card reveal">
+        <img src="images/event-4.jpg" alt="Event" onerror="this.style.display='none'">
+        <div class="img-placeholder" style="height:100%;min-height:200px;">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span>images/event-4.jpg</span>
+        </div>
+      </div>
+      <div class="event-card reveal d1">
+        <img src="images/event-5.jpg" alt="Event" onerror="this.style.display='none'">
+        <div class="img-placeholder" style="height:100%;min-height:200px;">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span>images/event-5.jpg</span>
+        </div>
+      </div>
+      <div class="event-card reveal d2">
+        <img src="images/event-6.jpg" alt="Event" onerror="this.style.display='none'">
+        <div class="img-placeholder" style="height:100%;min-height:200px;">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span>images/event-6.jpg</span>
         </div>
       </div>
     </div>
