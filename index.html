@@ -429,8 +429,9 @@ section{padding:104px 0;position:relative;overflow:hidden;}
 .eventy .sec-head p{color:rgba(251,251,246,0.62);}
 .eventy .eyebrow{color:var(--lime);}
 .eventy .blob-e{width:420px;height:420px;bottom:-160px;right:-140px;opacity:0.1;}
-.event-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;position:relative;z-index:2;}
-.event-card{border-radius:18px;overflow:hidden;position:relative;transition:transform .3s;aspect-ratio:4/3;}
+.event-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;position:relative;z-index:2;}
+.event-card{flex:0 1 calc((100% - 36px)/3);border-radius:18px;overflow:hidden;position:relative;transition:transform .3s;aspect-ratio:4/3;}
+.event-card.reel{aspect-ratio:9/16;}
 .event-card:hover{transform:scale(1.02);}
 .event-card img,.event-card video{width:100%;height:100%;object-fit:cover;display:block;}
 
@@ -562,14 +563,15 @@ footer .blob-f{width:300px;height:300px;top:-130px;left:-110px;opacity:0.06;}
   .gallery{grid-template-columns:1fr 1fr;}
   .g-item.wide{grid-column:span 2;aspect-ratio:16/10;}
   .offer-grid{grid-template-columns:1fr 1fr;}
-  .event-grid{grid-template-columns:1fr 1fr;}
+  .event-card{flex-basis:calc((100% - 18px)/2);}
   .vibe-inner{flex-direction:column;text-align:center;}
   .vibe-mark{display:none;}
 }
 @media (max-width:560px){
   .wrap,nav,.hero-grid,.foot-legal{padding-left:20px;padding-right:20px;}
   nav{padding-left:20px;padding-right:20px;}
-  .offer-grid,.event-grid,.loc-grid,.stats-grid{grid-template-columns:1fr;}
+  .offer-grid,.loc-grid,.stats-grid{grid-template-columns:1fr;}
+  .event-card{flex-basis:100%;}
   section{padding:72px 0;}
   .foot-row{flex-direction:column;text-align:center;}
   .gallery{display:block;position:relative;overflow:hidden;}
@@ -847,7 +849,7 @@ function ageNo(){
       <p>Lemon Vape to coś więcej niż regały — marka jest widoczna na lokalnych wydarzeniach w miastach, w których działają nasze salony.</p>
     </div>
     <div class="event-grid">
-      <div class="event-card reveal">
+      <div class="event-card reel reveal">
         <video id="reel-vid" src="videos/event-reel.mp4" muted autoplay playsinline style="width:100%;height:100%;object-fit:cover;display:block;transition:opacity 0.6s ease;"></video>
       </div>
       <div class="event-card reveal d1">
