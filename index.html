@@ -480,10 +480,6 @@ section{padding:104px 0;position:relative;overflow:hidden;}
 .offer-note{background:rgba(198,220,46,0.15);border-color:rgba(198,220,46,0.4);color:var(--paper);}
 .offer-note strong{color:var(--lime);}
 
-/* video progress dots */
-.video-dots{display:flex;gap:8px;justify-content:center;margin-top:32px;position:relative;z-index:2;}
-.video-dot{width:28px;height:3px;border-radius:2px;background:rgba(255,255,255,0.25);cursor:pointer;transition:background .3s,width .3s;}
-.video-dot.active{background:var(--lime);width:44px;}
 .offer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative;z-index:2;}
 .offer-card{border:1.5px solid rgba(255,255,255,0.12);border-radius:20px;padding:30px 26px;background:rgba(255,255,255,0.08);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:border-color .25s,transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s;position:relative;overflow:hidden;}
 .offer-card::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(198,220,46,0.04),transparent 60%);opacity:0;transition:opacity .3s;}
@@ -809,27 +805,27 @@ function ageNo(){
     <div class="gallery-wrap">
       <div class="gallery">
         <div class="g-item wide reveal" data-slide="0">
-          <img src="images/gallery-1.jpg" alt="Salon Lemon Vape" onerror="this.style.display='none'">
+          <img src="images/gallery-1.jpg" alt="Salon Lemon Vape" loading="lazy" onerror="this.style.display='none'">
           <div class="img-placeholder"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>images/gallery-1.jpg</span></div>
           <span class="tag">Poznań — Galeria MM</span>
         </div>
         <div class="g-item reveal d1" data-slide="1">
-          <img src="images/gallery-2.jpg" alt="Salon Lemon Vape" onerror="this.style.display='none'">
+          <img src="images/gallery-2.jpg" alt="Salon Lemon Vape" loading="lazy" onerror="this.style.display='none'">
           <div class="img-placeholder"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>images/gallery-2.jpg</span></div>
           <span class="tag">Wodzisław Śląski — Karuzela</span>
         </div>
         <div class="g-item reveal d2" data-slide="2">
-          <img src="images/gallery-3.jpg" alt="Salon Lemon Vape" onerror="this.style.display='none'">
+          <img src="images/gallery-3.jpg" alt="Salon Lemon Vape" loading="lazy" onerror="this.style.display='none'">
           <div class="img-placeholder"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>images/gallery-3.jpg</span></div>
           <span class="tag">Lublin — Diamentowa</span>
         </div>
         <div class="g-item reveal" data-slide="3">
-          <img src="images/gallery-4.jpg" alt="Salon Lemon Vape" onerror="this.style.display='none'">
+          <img src="images/gallery-4.jpg" alt="Salon Lemon Vape" loading="lazy" onerror="this.style.display='none'">
           <div class="img-placeholder"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>images/gallery-4.jpg</span></div>
           <span class="tag">Bytom — Agora</span>
         </div>
         <div class="g-item reveal d1" data-slide="4">
-          <img src="images/gallery-5.jpg" alt="Salon Lemon Vape" onerror="this.style.display='none'">
+          <img src="images/gallery-5.jpg" alt="Salon Lemon Vape" loading="lazy" onerror="this.style.display='none'">
           <div class="img-placeholder"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>images/gallery-5.jpg</span></div>
           <span class="tag">Swarzędz</span>
         </div>
@@ -856,35 +852,35 @@ function ageNo(){
         <video id="reel-vid" src="videos/event-reel.mp4" muted autoplay playsinline style="width:100%;height:100%;object-fit:cover;display:block;transition:opacity 0.6s ease;"></video>
       </div>
       <div class="event-card reveal d1">
-        <img src="images/event-2.jpg" alt="Event" onerror="this.style.display='none'">
+        <img src="images/event-2.jpg" alt="Stojak z produktami Lemon Vape podczas eventu" loading="lazy" onerror="this.style.display='none'">
         <div class="img-placeholder" style="height:100%;min-height:200px;">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
           <span>images/event-2.jpg</span>
         </div>
       </div>
       <div class="event-card reveal d2">
-        <img src="images/event-3.jpg" alt="Event" onerror="this.style.display='none'">
+        <img src="images/event-3.jpg" alt="Samochód wyścigowy Lemon Vape pod namiotem eventowym" loading="lazy" onerror="this.style.display='none'">
         <div class="img-placeholder" style="height:100%;min-height:200px;">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
           <span>images/event-3.jpg</span>
         </div>
       </div>
       <div class="event-card reveal">
-        <img src="images/event-4.jpg" alt="Event" onerror="this.style.display='none'">
+        <img src="images/event-4.jpg" alt="Samochód wyścigowy Lemon Vape na evencie miejskim" loading="lazy" onerror="this.style.display='none'">
         <div class="img-placeholder" style="height:100%;min-height:200px;">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
           <span>images/event-4.jpg</span>
         </div>
       </div>
       <div class="event-card reveal d1">
-        <img src="images/event-5.jpg" alt="Event" onerror="this.style.display='none'">
+        <img src="images/event-5.jpg" alt="Samochód Lemon Vape przed salonem" loading="lazy" onerror="this.style.display='none'">
         <div class="img-placeholder" style="height:100%;min-height:200px;">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
           <span>images/event-5.jpg</span>
         </div>
       </div>
       <div class="event-card reveal d2">
-        <img src="images/event-6.jpg" alt="Event" onerror="this.style.display='none'">
+        <img src="images/event-6.jpg" alt="Samochód NITRO z brandingiem Lemon Vape wieczorem" loading="lazy" onerror="this.style.display='none'">
         <div class="img-placeholder" style="height:100%;min-height:200px;">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
           <span>images/event-6.jpg</span>
@@ -1106,84 +1102,12 @@ function ageNo(){
   </div>
 </footer>
 
-<div id="totop" aria-label="Do góry">↑</div>
+<div id="totop" role="button" tabindex="0" aria-label="Do góry">↑</div>
 
 <script>
 (function(){
   var prog = document.getElementById('progress');
   var totop = document.getElementById('totop');
-
-  // video background rotator
-  (function(){
-    var blurs = document.querySelectorAll('.vid-blur');
-    var sharps = document.querySelectorAll('.vid-sharp');
-    var dots = document.querySelectorAll('.video-dot');
-    var current = 0;
-    var interval;
-
-    function goTo(index){
-      blurs[current].classList.remove('active');
-      sharps[current].classList.remove('active');
-      current = index;
-      blurs[current].classList.add('active');
-      blurs[current].play();
-      sharps[current].classList.add('active');
-      sharps[current].play();
-    }
-
-    function next(){
-      goTo((current + 1) % sharps.length);
-    }
-
-    function startInterval(){
-      clearInterval(interval);
-      interval = setInterval(next, 5000);
-    }
-
-    dots.forEach(function(dot){
-      dot.addEventListener('click', function(){
-        goTo(parseInt(dot.getAttribute('data-index')));
-        startInterval();
-      });
-    });
-
-    function tryPlay(vid){
-      if(!vid) return;
-      var p = vid.play();
-      if(p && p.catch) p.catch(function(){});
-    }
-
-    function startVideos(){
-      tryPlay(blurs[current]);
-      tryPlay(sharps[current]);
-      startInterval();
-    }
-
-    var offerSection = document.querySelector('.offer');
-    var started = false;
-    var offerIO = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(e.isIntersecting){
-          startVideos();
-        } else {
-          clearInterval(interval);
-        }
-      });
-    }, {threshold: 0.1});
-    offerIO.observe(offerSection);
-
-    // iOS fallback: first user touch unlocks autoplay
-    function unlockOnTouch(){
-      if(started) return;
-      started = true;
-      tryPlay(blurs[current]);
-      tryPlay(sharps[current]);
-      document.removeEventListener('touchstart', unlockOnTouch);
-      document.removeEventListener('click', unlockOnTouch);
-    }
-    document.addEventListener('touchstart', unlockOnTouch, {passive:true});
-    document.addEventListener('click', unlockOnTouch);
-  })();
 
   // reel video — slow + fade loop
   (function(){
@@ -1267,6 +1191,7 @@ function ageNo(){
   }
   window.addEventListener('scroll', onScroll, {passive: true});
   totop.addEventListener('click', function(){ window.scrollTo({top: 0, behavior: 'smooth'}); });
+  totop.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'}); } });
 
   // reveal on scroll
   var io = new IntersectionObserver(function(es){
