@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://stfs-workflow.github.io/lemonvape/sitemap.xml
+Sitemap: https://lemonvape.pl/sitemap.xml
